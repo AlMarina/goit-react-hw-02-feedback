@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Notification } from 'components/FeedbackOptions/Notification/Notification';
+import { Notification } from 'components/Notification/Notification';
+import { Card, Text } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -13,13 +14,13 @@ export const Statistics = ({
       {total === 0 ? (
         <Notification message="There is no feedback" />
       ) : (
-        <div>
-          <p>Good: {good}</p>
-          <p>Neutral: {neutral}</p>
-          <p>Bad: {bad}</p>
-          <p>Total: {total}</p>
-          <p>Positive feedback: {positivePercentage}%</p>
-        </div>
+        <Card>
+          <Text>Good: {good}</Text>
+          <Text>Neutral: {neutral}</Text>
+          <Text>Bad: {bad}</Text>
+          <Text>Total: {total}</Text>
+          <Text>Positive feedback: {positivePercentage}%</Text>
+        </Card>
       )}
     </div>
   );
