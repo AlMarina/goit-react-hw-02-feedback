@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Notification } from 'components/Notification/Notification';
 import { Card, Text } from './Statistics.styled';
 
 export const Statistics = ({
@@ -11,17 +10,13 @@ export const Statistics = ({
 }) => {
   return (
     <div>
-      {total === 0 ? (
-        <Notification message="There is no feedback" />
-      ) : (
-        <Card>
-          <Text>Good: {good}</Text>
-          <Text>Neutral: {neutral}</Text>
-          <Text>Bad: {bad}</Text>
-          <Text>Total: {total}</Text>
-          <Text>Positive feedback: {positivePercentage}%</Text>
-        </Card>
-      )}
+      <Card>
+        <Text>Good: {good}</Text>
+        <Text>Neutral: {neutral}</Text>
+        <Text>Bad: {bad}</Text>
+        <Text>Total: {total}</Text>
+        <Text>Positive feedback: {positivePercentage}%</Text>
+      </Card>
     </div>
   );
 };
